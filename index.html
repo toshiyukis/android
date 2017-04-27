@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="result">
+
+  </div><!-- .result -->
+
+
+<script src="js/checkAndroid.js" charset="utf-8"></script>
+<script>
+  var element = document.getElementsByTagName('body')[0];
+  var result = document.getElementsByClassName('result')[0];
+  var browser = new Browser();
+  element.classList.add(browser.getNameAndBrowser());
+  element.classList.add(browser.getNameSPBrowser());
+  element.classList.add(browser.checkAndroidWebkit());
+  result.innerHTML = browser.getNameAndBrowser() + " / " + browser.getNameSPBrowser() + " / " + browser.checkAndroidWebkit();
+</script>
+</body>
+</html>
