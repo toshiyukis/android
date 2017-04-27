@@ -9,6 +9,14 @@ Browser.prototype.getNameSPBrowser = function() { // iOS or Android or other
     return "android";
   } else if (ua.indexOf('iphone') != -1 || ua.indexOf('ipad') != -1 || ua.indexOf('ipod') != -1) {
     return "ios";
+  } else if(ua.indexOf('msie') != -1 || ua.indexOf('trident') != -1){
+    return "ie";
+  } else if(ua.indexOf('firefox') != -1){
+    return "firefox";
+  } else if(ua.indexOf('safari') != -1){
+    return "safari";
+  } else if(ua.indexOf('chrome') != -1){
+    return "chrome";
   }
   return "otherBrowser";
 }
